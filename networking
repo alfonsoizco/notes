@@ -1,0 +1,6 @@
+Monitorizar todo el trafico del puerto 25 en una ip de la maquina:
+$ tcpdump -i bge0 tcp port 25 host servername
+
+host servername -> el nombre del host del servidor que estamos sniffing
+-i bg0    -> especificar el interfaz que quieres sniffing
+port 25   -> el puerto que haces sniffing
