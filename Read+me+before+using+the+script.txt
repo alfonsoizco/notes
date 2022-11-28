@@ -1,0 +1,18 @@
+1. Scripts are provided to help you in practicing my demos, so please watch the lecture before using this script
+2. I used these scripts for preparing demos, to use this you have to change few variables in this script with your data 
+3. Please change below values in these script, based on your setup. (I have explained each of this in my lectures)
+	
+    a) IP address in connection URI 
+       For sure this will change for you
+
+    b) Exchange name 
+       You have to publish to exchange, which has appropriate binding to queue from which you want to consume                messages
+
+    c) Queue Name
+       Both publisher and consumer should have same queue name
+
+    d) Routing Key
+       Routing key will differ based on the binding key between the exchange and the queue to which you want to 
+       route the message. Message will be routed to a queue which has a binding key same as the routing key you used         in publisher
+
+Apart from above values, you should also change other parameters, if i mention anything in my lecture.

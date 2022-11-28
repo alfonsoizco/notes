@@ -1,0 +1,29 @@
+[
+
+{rabbit,
+  [
+   
+   {tcp_listeners, [{"127.0.0.1", 56728},
+                    {"::1",       56728}]},
+					
+   {num_tcp_acceptors, 100},
+   ]
+   
+   }
+   
+{rabbitmq_shovel,
+    [ {shovels, [{killer_push,
+      [{sources,
+        [{brokers,"amqp://vh1_user:vh1_user@52.35.147.127:5672/vh1_test"}]},
+       {destinations,
+        [{broker, "amqp://vh2_user:vh2_user@52.35.147.127:5672/vh2_test"}]},
+       {queue, <<"hello3">>},
+       {ack_mode, on_confirm},
+       {reconnect_delay, 5}
+      ]}
+     ]
+   }]
+   }
+
+
+].
